@@ -4,7 +4,14 @@ lib.nsc_extended_ce_config {
 # Readmore LinkButton Rendering
   10 = COA
   10 {
-    if.isTrue.field = nsc_extended_ce_readMoreLink
+    if {
+      isTrue.field = nsc_extended_ce_enableReadmore
+      isPositive.cObject = TEXT
+      isPositive.cObject {
+        if.isTrue.field = nsc_extended_ce_readMoreLink
+        value = 1
+      }
+    }
     wrap = <p class="nsc-extended-ce-readmoreLink align-right article-read-more">|</p>
 
     10 = TEXT
@@ -24,18 +31,18 @@ lib.nsc_extended_ce_config {
   }
 }
 
-tt_content.header.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.text.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.image.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.textpic.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.bullets.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.uploads.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.table.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.multimedia.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.media.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.mailform.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.search.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.menu.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.list.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.html.stdWrap.append < lib.nsc_extended_ce_config
-tt_content.login.stdWrap.append < lib.nsc_extended_ce_config
+tt_content.header.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.text.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.image.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.textpic.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.bullets.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.uploads.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.table.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.multimedia.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.media.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.mailform.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.search.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.menu.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.list.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.html.stdWrap.append =< lib.nsc_extended_ce_config
+tt_content.login.stdWrap.append =< lib.nsc_extended_ce_config
